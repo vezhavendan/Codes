@@ -1,0 +1,15 @@
+import org.openqa.selenium.WebDriver;
+
+public class JunitAssertion {
+	static WebDriver driver;
+	
+	@BeforeClass
+	public static void launchingBrowser() {
+		System.setProperty("webdriver.chrome.driver", )
+		
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,25 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelWriteUpdateExample {
+
+	public static void main(String[] args) throws Throwable {
+		File f= new File("C:\\Users\\Sathish cj\\Desktop\\vezha\\excelwriteexample.xlsx");//create file
+		XSSFWorkbook w=new XSSFWorkbook();
+		Sheet s=w.createSheet("vezh");
+		Row r=s.createRow(0);
+		Cell c=r.createCell(0);
+		c.setCellValue("Vezha Vendan");
+		
+		FileOutputStream f1=new FileOutputStream(f);
+		w.write(f1);
+		
+	}
+
+}
